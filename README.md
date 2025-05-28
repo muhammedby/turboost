@@ -28,7 +28,7 @@ sudo dnf install python3-gobject python3-psutil msr-tools
 
 2. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/turbo-boost-control.git
+git clone https://github.com/muhammedby/turboost.git
 cd turbo-boost-control
 ```
 
