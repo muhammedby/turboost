@@ -1,0 +1,56 @@
+{
+    "app-id": "org.turboboost.control",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "45",
+    "sdk": "org.gnome.Sdk",
+    "command": "turboboost-control",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--device=dri"
+    ],
+    "modules": [
+        {
+            "name": "turboboost-control",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-deps --prefix=/app setuptool-68.0.0.tar.gz",
+                "pip3 install --no-deps --prefix=/app psutils-5.9.5.tar.gz",
+                "install -Dm755 turbo_boost_control.py /app/bin/turboboost-control",
+                "install -Dm644 org.turboboost.control.desktop /app/share/applications/org.turboboost.control.desktop",
+                "install -Dm644 org.turboboost.control.meminfo.xml /app/share/meminfo/org.turboboost.control.meminfo.xml",
+                "mkdir -p /app/share/icons/hicolor/128x128/apps",
+                "install -Dm644 org.turboboost.control.png /app/share/icons/hicolor/128x128/apps/org.turboboost.control.png"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "turbo_boost_control.py"
+                },
+                {
+                    "type": "file",
+                    "path": "org.turboboost.control.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "org.turboboost.control.meminfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "org.turboboost.control.png"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/source/p/psutil/psutil-5.9.5.tar.gz",
+                    "sha256": "5410638e4df39c54d957fc51ce03048acd8e6d60abc0f5107af51e5fb566eb3c"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-68.0.0.tar.gz",
+                    "sha256": "baf1fdb41c6da4cd2eae722e135500da913332ab3f2f5c7d33af9b492acb5235"
+                }
+            ]
+        }
+    ]
+} 

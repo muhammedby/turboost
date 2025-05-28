@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Intel Turbo Boost Control
+Comment=Intel işlemciler için Turbo Boost kontrol uygulaması
+Exec=turboboost-control
+Icon=org.turboboost.control
+Terminal=false
+Type=Application
+Categories=System;Settings;
+StartupNotify=true
+Keywords=CPU;Turbo;Boost;Intel;
+X-Flatpak=org.turboboost.control 

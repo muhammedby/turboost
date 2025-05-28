@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.turboboost.control</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Intel Turbo Boost Control</name>
+  <summary>Intel işlemciler için Turbo Boost kontrol uygulaması</summary>
+  <description>
+    <p>
+      Bu uygulama, Intel işlemciler için Turbo Boost özelliğini açıp kapatmanızı sağlayan basit bir GTK arayüzlü uygulamadır.
+    </p>
+    <ul>
+      <li>Turbo Boost durumunu görüntüleme</li>
+      <li>Turbo Boost'u açma/kapama</li>
+      <li>Gerçek zamanlı CPU kullanımı ve frekans bilgisi</li>
+      <li>Kullanıcı dostu arayüz</li>
+      <li>Durum göstergeleri ve ikonlar</li>
+    </ul>
+  </description>
+  <url type="homepage">https://github.com/yourusername/turboboost-control</url>
+  <url type="bugtracker">https://github.com/yourusername/turboboost-control/issues</url>
+  <developer_name>Your Name</developer_name>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.0" date="2024-03-20"/>
+  </releases>
+</component> 

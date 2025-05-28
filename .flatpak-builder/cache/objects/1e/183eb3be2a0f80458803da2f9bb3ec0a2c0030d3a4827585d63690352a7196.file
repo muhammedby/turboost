@@ -1,0 +1,47 @@
+{
+  "id" : "org.turboboost.control",
+  "runtime" : "org.gnome.Platform",
+  "runtime-version" : "45",
+  "runtime-commit" : "547c38809093f20a153446421224c4d197bc8ce24d3c5cdd4bab978bbf9b3c83",
+  "sdk" : "org.gnome.Sdk",
+  "sdk-commit" : "82e5465199113f4feaddfdca5d081c7ea9eb07a20e0b76d21604d582d6c4d903",
+  "command" : "turboboost-control",
+  "modules" : [
+    {
+      "name" : "turboboost-control",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "path" : "turbo_boost_control.py",
+          "type" : "file"
+        },
+        {
+          "path" : "org.turboboost.control.desktop",
+          "type" : "file"
+        },
+        {
+          "path" : "org.turboboost.control.metainfo.xml",
+          "type" : "file"
+        },
+        {
+          "path" : "org.turboboost.control.png",
+          "type" : "file"
+        }
+      ],
+      "build-commands" : [
+        "install -Dm755 turbo_boost_control.py /app/bin/turboboost-control",
+        "install -Dm644 org.turboboost.control.desktop /app/share/applications/org.turboboost.control.desktop",
+        "install -Dm644 org.turboboost.control.metainfo.xml /app/share/metainfo/org.turboboost.control.metainfo.xml",
+        "mkdir -p /app/share/icons/hicolor/128x128/apps",
+        "install -Dm644 org.turboboost.control.png /app/share/icons/hicolor/128x128/apps/org.turboboost.control.png"
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--device=dri"
+  ],
+  "source-date-epoch" : 1748425623
+}

@@ -1,0 +1,10 @@
+[Application]
+name=org.turboboost.control
+runtime=org.gnome.Platform/x86_64/45
+sdk=org.gnome.Sdk/x86_64/45
+command=turboboost-control
+
+[Context]
+shared=ipc;
+sockets=x11;wayland;
+devices=dri;
